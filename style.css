@@ -1,0 +1,104 @@
+:root {
+    --primary-cl: #01b982;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 100%;
+    padding: 2rem;
+}
+
+h1 {
+    color: var(--primary-cl);
+}
+
+small {
+    font-size: .8rem;
+    color: #768170;
+    padding: .5rem;
+}
+
+small span {
+    color: var(--primary-cl);
+    font-weight: bold;
+}
+
+p {
+    margin-top: .5rem;
+    text-align: center;
+    color: #768170;
+}
+
+#swap {
+    cursor: pointer;
+    position: relative;
+    left: 1rem;
+    transform: rotate(0deg);
+    transition: transform 400ms ease;
+}
+
+#swap.spin {
+    transform: rotate(180deg);
+}
+
+.currency {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.currency select {
+    padding: .8em 1.6em .8em .8em;
+    appearance: none;
+    cursor: pointer;
+    border: 1px solid #dedede;
+    border-radius: .5em;
+    font-size: 1em;
+}
+
+.currency input {
+    border: 0;
+    background: transparent;
+    font-size: 2em;
+    text-align: right;
+}
+
+input:in-range {
+    border: 2px solid green;
+}
+
+input:out-of-range {
+    border: 2px solid red;
+}
+
+.swap-rate-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rate {
+    color: var(--primary-cl);
+    font-size: 1em;
+    padding: 0 .8em;
+}
+
+select:focus, 
+input:focus {
+    outline: none;
+}
+
